@@ -27,5 +27,10 @@ while h=='y':
             randsp=random.choice(Sp_char)
             password=password+randdigit+randchar+randsp
     print(password)
+    j=input("Do you want to save this password[y/n]")
+    if j=='y':
+        fh=open('savedpass.txt','a')
+        fh.write(password+"\n")
+        fh.close()
     h=input("Do you want to continue")        
 
